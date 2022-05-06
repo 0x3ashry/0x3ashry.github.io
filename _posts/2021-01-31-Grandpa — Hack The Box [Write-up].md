@@ -1,7 +1,7 @@
 ---
 title: "Grandpa — Hack The Box [Write-up]"
 author: 0x3ashry
-description: "Writeup for Blunder Hackthebox Machine"
+description: "Writeup for Grandpa Hackthebox Machine"
 date: 2021-01-31 07:00:00 +0200
 categories: [HackTheBox]
 tags: [HTB, Linux]
