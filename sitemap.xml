@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://itsfading.github.io/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/categories/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/tags/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/archives/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/about/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/posts/Cybertalents-Space-Web-Writeup/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/posts/Cybertalents-CatchMomen-Web-Writeup/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/posts/Hackerone-GraphQL-CTF-Writeup/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/posts/Cybertalents-Crashed-Machine-Writeup/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/posts/Cybertalents-Shadower-Machine-Writeup/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/posts/Cybertalents-StringHighlighter-Web-Writeup/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/posts/Cybertalents-WrongToken-Web-Writeup/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/posts/Cybertalents-F2UP-Web-Writeup/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/posts/Cybertalents-SkiddyKill3r-Web-Writeup/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/posts/Cybertalents-xCorp-Web-Writeup/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/page2/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/posts/Active-Directory-Basics/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/tags/ctf/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/tags/cybertalents/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/tags/web/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/tags/active-directory/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/tags/red-team/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/tags/box/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/tags/machines/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/tags/graphql/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/tags/hackerone/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/categories/active-directory-101/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/categories/cybertalents-writeups/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/categories/hackerone-ctf/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/posts/Active-Directory-Attacks/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/posts/Active-Directory-Enumeration/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://itsfading.github.io/posts/Active-Directory-Authentication/</loc>
+  <lastmod>2021-08-14T15:20:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
