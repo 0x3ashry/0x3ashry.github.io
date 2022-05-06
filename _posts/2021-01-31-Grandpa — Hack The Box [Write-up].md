@@ -52,7 +52,9 @@ in the enumeration phase we found that webdav is enabled and we are working on I
 
 ## 2. EXPLOITATION
 
-    searchsploit webdav
+```bash
+searchsploit webdav
+```
 
 ![](/img/HTB/Grandpa/img (3).png)
 
