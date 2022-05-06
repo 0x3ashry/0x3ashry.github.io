@@ -219,7 +219,7 @@ Once we typed this command it opened the suspended tmux session with root privil
 BOOOOOOOOOOOOOOOOOOOOM!!!!! Now we are root :D
 
 
-## PRIVILEGE ESCALATION — Method 2
+## 3. PRIVILEGE ESCALATION — Method 2
 
 What about our Dirty COW 😈
 
