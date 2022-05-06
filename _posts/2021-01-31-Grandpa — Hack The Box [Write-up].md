@@ -4,7 +4,7 @@ author: 0x3ashry
 description: "Writeup for Grandpa Hackthebox Machine"
 date: 2021-01-31 07:00:00 +0200
 categories: [HackTheBox]
-tags: [HTB, Linux]
+tags: [HTB, Windows]
 ---
 
 ## Introduction
