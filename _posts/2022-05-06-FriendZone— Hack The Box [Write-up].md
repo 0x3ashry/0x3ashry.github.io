@@ -13,12 +13,12 @@ tags: [HTB, Linux]
 ![](/img/HTB/FriendZone/FriendZone.png)
 
 #### Used Tools:
-- nmap
-- dig
-- smbmap
-- smbclient
-- linPeas
-- pspy
+- Nmap
+- Dig
+- Smbmap
+- Smbclient
+- LinPeas
+- Pspy
 
 
 ## 1. SCANNING & ENUMERATION
