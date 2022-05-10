@@ -7,10 +7,9 @@ categories: [HackTheBox]
 tags: [HTB, Linux]
 ---
 
-
-## Introduction
-
 ![](/img/HTB/Blunder/Blunder.png)
+
+Blunder is a Linux machine rated as easy from Hack The Box, it consists on finding credentials to log in to Bludit and then use a RCE exploit to gain an initial shell, then some database files can be read in order to pivot users, finally a root shell can be spawned using sudo security bypass.
 
 #### Used Tools:
 - nmap

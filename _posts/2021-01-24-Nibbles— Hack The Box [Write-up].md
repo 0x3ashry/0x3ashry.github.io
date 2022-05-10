@@ -7,9 +7,6 @@ categories: [HackTheBox]
 tags: [HTB, Linux]
 ---
 
-
-## Introduction
-
 ![](/img/HTB/Nibbles/Nibbles.png)
 
 Nibbles is a fairly simple machine, however with the inclusion of a login blacklist, it is a fair bit more challenging to find valid credentials. Luckily, a username can be enumerated and guessing the correct password does not take long for most.

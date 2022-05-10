@@ -5,11 +5,7 @@ description: "Writeup for Valentine Hackthebox Machine"
 date: 2021-02-05 16:00:00 +0200
 categories: [HackTheBox]
 tags: [HTB, Linux]
-pin: true
 ---
-
-
-## Introduction
 
 ![](/img/HTB/Valentine/Valentine.png)
 

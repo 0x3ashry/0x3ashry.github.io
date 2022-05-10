@@ -7,10 +7,9 @@ categories: [HackTheBox]
 tags: [HTB, Linux]
 ---
 
-
-## Introduction
-
 ![](/img/HTB/Irked/Irked.png)
+
+This was an easy Linux box that involved exploiting malicious backdoor that was added to the Unreal IRCD 3.2.8.1 download archive to get initial shell, Then exploiting a custom SUID binary to gain root access.
 
 #### Used Tools:
 - nmap

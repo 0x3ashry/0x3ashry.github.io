@@ -5,12 +5,13 @@ description: "Writeup for FriendZone Hackthebox Machine"
 date: 2022-05-06 19:00:00 +0200
 categories: [HackTheBox]
 tags: [HTB, Linux]
+pin: true
 ---
 
-
-## Introduction
-
 ![](/img/HTB/FriendZone/FriendZone.png)
+
+FriendZone was a relatively easy box, but as far as easy boxes go, it had a lot of enumeration and garbage trolls to sort through. In all the enumeration, I’ll find a php page with an LFI, and use SMB to read page source and upload a webshell. I’ll uprivesc to the next user with creds from a database conf file, and then to root using a writable python module to exploit a root cron job calling a python script.
+
 
 #### Used Tools:
 - Nmap
