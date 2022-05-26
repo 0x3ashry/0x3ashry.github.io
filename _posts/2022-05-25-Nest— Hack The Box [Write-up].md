@@ -71,8 +71,10 @@ I found that now I have access to the `IT` directory
 But it has a lot of files so let's mount it and have a local copy of it, it would be easier 
 
 ```bash
-smbclient -U "TempUser" --password welcome2019 //10.10.10.178/Data
+sudo mount -o user=TemUser -t cifs //10.10.10.178/Data /mnt/nest
 ```
+
+## 2. EXPLOITATION:
 
 ![](/img/HTB/Nest/img (6).png)
 
@@ -121,7 +123,7 @@ It is a library that have 4 functions, 2 for password encoding and other 2 for p
 
 `DecryptString` function which was called previously calls `Decrypt` function which is an AES Encryption cypher with predefined values for the passphrase, salt, number of iterations, initvector and key size in the DecryptString function
 
-```vbnet
+```C
     Public Shared Function DecryptString(EncryptedString As String) As String
         If String.IsNullOrEmpty(EncryptedString) Then
             Return String.Empty
@@ -131,7 +133,7 @@ It is a library that have 4 functions, 2 for password encoding and other 2 for p
     End Function
 ```
 
-```vbnet
+```C
     Public Shared Function Decrypt(ByVal cipherText As String, _
                                    ByVal passPhrase As String, _
                                    ByVal saltValue As String, _
@@ -194,7 +196,7 @@ All we have to do is to re run the code but replacing the `EncryptedString` para
 
 I will use online VB compiler from codingrooms.com and add the previous 2 function in addition to this submain function to call them:
 
-```vbnet
+```C
 Sub Main()
     Dim password as String
     password = DecryptString("fTEzAfYDoz1YzkqhQkH6GQFYKp1XY5hm7bjOP86yYxE=")
