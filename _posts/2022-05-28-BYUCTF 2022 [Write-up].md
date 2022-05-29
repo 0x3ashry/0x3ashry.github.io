@@ -8,7 +8,7 @@ tags: [CTF, Web, Cryptography, Miscellaneous]
 ---
 
 
-BYUCTF was a CTF happens at May 27th 10:00 AM MT to May 28th 10:00 PM MT and was organized by CSA - Cybersecurity Student Association
+BYUCTF was a CTF organized by CSA - Cybersecurity Student Association during the period of May 27th 10:00 AM MT to May 28th 10:00 PM MT 
 
 ![](/img/CTF/BYUCTF_2022/BYUCTF.png)
 
