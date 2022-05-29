@@ -8,6 +8,15 @@ tags: [CTF, Web, Cryptography, Miscellaneous]
 ---
 
 
+BYUCTF was a CTF happens at May 27th 10:00 AM MT to May 28th 10:00 PM MT and was organized by CSA - Cybersecurity Student Association
+
+![](/img/CTF/BYUCTF_2022/BYUCTF.png)
+
+We proudly got 5th Place among 435 Competing Teams.
+
+![](/img/CTF/BYUCTF_2022/Team.png)
+
+
 ## Web - Wordle
 
 Wordle was an easy web challange that is inspired from the **Wordle** game.
