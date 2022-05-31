@@ -216,7 +216,7 @@ First he gave ma an MD5 hash for the flag to verify that this is the flag before
 
 Whatever let's download the file, It is an image containing the flag but was covered with a black bold line...
 
-![](/img/CTF/BYUCTF_2022/Reconstruct_1.png)
+![](/img/CTF/BYUCTF_2022/Reconstruct_photo.png)
 
 At the end of the file, The lower-case Alphabet and the numbers were attached to use them in the process of identifying the flag...
 
