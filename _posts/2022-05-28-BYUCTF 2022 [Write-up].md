@@ -8,7 +8,7 @@ tags: [CTF, Web, Cryptography, Miscellaneous]
 ---
 
 
-BYUCTF was a CTF organized by CSA - Cybersecurity Student Association during the period of May 27th 10:00 AM MT to May 28th 10:00 PM MT 
+BYUCTF was a CTF organized by CSA - Cybersecurity Student Association during the period of May 27th to May 28th.
 
 ![](/img/CTF/BYUCTF_2022/BYUCTF.png)
 
@@ -133,6 +133,8 @@ I tried `HUSKY` next and continue the same process...
 
 ![](/img/CTF/BYUCTF_2022/Wordle_6.png)
 
+Let's try `PUNCH`
+
 ![](/img/CTF/BYUCTF_2022/Wordle_7.png)
 
 BOOOOOOOOOOOOOOOOOOOM !!! We got the flag `byuctf{b@c0n_grease}`
@@ -172,8 +174,6 @@ Now I have `10,201 QR Codes` stored in file called `QRCodes`, And I stucked for 
 Then I realized from the name of the challange that `XQR` is near to `XOR` so what if I XORed all the QR codes together...
 
 I started with reading them using `cv2` library from python-opencv and then in order to make my trick work I changed the readed image to binary 0 and 1, black and white pixels. Then I XORed each pixel with the same pixels in all the other 10,201 qr codes and saved it, Then displaying the result shows:
-
-
 
 ```python
 import cv2
@@ -251,8 +251,11 @@ I solved it manually by comparing the sizes of the letters, and here were the st
 Now the generated words are: `XvXn with the littlXXt of info i XXn rXXXnXtrXXt it`
 
 XvXn --> can't know what it is
+
 l1ttlXXt --> guessed to be l1ttlest
+
 XXn --> can't know what it is
+
 rXXXnXtrXXt --> I count the number of letters and they happened to be equal to the word `reconstruct` which is the challange name, Bingooooo
 
 Now the flag is byuctf{`XvXn w1th the l1ttlest of 1nfo 1 XXn reconstruct 1t`}
@@ -308,7 +311,9 @@ It displayed a large message and disconnected, rerun it again it displays differ
 There was a python script attached with the challange, I opened it and found it does the following:
 
 1. Opens the flag file and read it
+
 2. Calls `random_string` function which changes the characters of the flag according to a random number from 0:1, If the random number < 0.25 the current character remains as it is, else it is replaced with another random character
+
 3. Then the generated string `(new_string)` will be displayed using `pyfiglet.figlet_format` function which displays it in the format we saw in the cmd
 
 ```python
