@@ -8,9 +8,9 @@ tags: [HTB, Linux]
 ---
 
 
-![](/img/HTB/Posion/Poison.png)
+![](/img/HTB/Poison/Poison1.png)
 
-Posion is a Medium rated FreeBSD retired box, but an enjoyable one with easy user access and good privesc.
+Poison is a Medium rated FreeBSD retired box, but an enjoyable one with easy user access and good privesc.
 Let's get started. 
 
 #### Used Tools:
@@ -26,7 +26,7 @@ Let's get started.
 
 I will start with nmap and the -A parameter to enable OS detection, version detection, script scanning, and traceroute and append the output to tee command which save the in a file named “nmap” and also show the output on the screen.
 
-![](/img/HTB/Posion/img (1).png)
+![](/img/HTB/Poison/img (1).png)
 
 We found 2 opened ports:
 - 22 for an SSH
@@ -36,21 +36,21 @@ I tried anonymous login in the ssh but it didn't work so I jumbed directly to th
 
 All I found is a temporary website to test local **.php** scripts
 
-![](/img/HTB/Posion/img (2).png)
+![](/img/HTB/Poison/img (2).png)
 
 It says that the scripts or sites to be tested are `ini.php, info.php, listfiles.php, phpinfo.php`
 
 I tried them all and but when I tried `listfiles.php` it showed me a list of the files in there...
 
-![](/img/HTB/Posion/img (3).png)
+![](/img/HTB/Poison/img (3).png)
 
 There is an interesting file called `pwdbackup.txt`, What if we put it in the script name field in the temporary website and see if it will accept it
 
-![](/img/HTB/Posion/img (4).png)
+![](/img/HTB/Poison/img (4).png)
 
 It said "This password is secure, it's encoded atleast 13 times.. what could go wrong really.. " and have a very long base64 password
 
-![](/img/HTB/Posion/img (5).png)
+![](/img/HTB/Poison/img (5).png)
 
 I will try decoding it 13 times using Cyberchef
 
@@ -58,14 +58,14 @@ Cyberchef: https://gchq.github.io/CyberChef/
 
 I applied *From Base64* module 12 times and it reveals a password `Charix!2#4%6&8(0`
 
-![](/img/HTB/Posion/img (6).png)
+![](/img/HTB/Poison/img (6).png)
 
 
 ## 2. EXPLOITATION:
 
 I tried ssh with creds username:charix (this was a guess because it wass the prefix of the password) and password:Charix!2#4%6&8(0
 
-![](/img/HTB/Posion/img (7).png)
+![](/img/HTB/Poison/img (7).png)
 
 BOOOOOOOOOOOOOOOOOOOOOOOOOOOM ! We successfully gained a ssh shell for `charix` with the user flag in the home directory
 
@@ -80,7 +80,7 @@ I found python module installed in poison so I will open python http server and 
 python -m SimpleHTTPServer 8080
 ```
 
-![](/img/HTB/Posion/img (8).png)
+![](/img/HTB/Poison/img (8).png)
 
 At kali 
 
@@ -90,7 +90,7 @@ wget http://10.10.10.84:8080/secret.zip
 
 And it is transfered successfully.
 
-![](/img/HTB/Posion/img (9).png)
+![](/img/HTB/Poison/img (9).png)
 
 Let's Unzip it
 
@@ -100,7 +100,7 @@ unzip secret.zip
 
 It required a password so I tried the same password as charix's ssh password:Charix!2#4%6&8(0 and it worked !!
 
-![](/img/HTB/Posion/img (10).png)
+![](/img/HTB/Poison/img (10).png)
 
 This is a live example on the dangers of using the same password in many places...
 
@@ -108,7 +108,7 @@ I can't understand the file content righ now but I think it is a password for so
 
 Let's transfere `linpeas.sh` to Poison and run it...
 
-![](/img/HTB/Posion/img (12).png)
+![](/img/HTB/Poison/img (12).png)
 
 I found a `VNC` Service running as a root on port `5901`
 
@@ -118,7 +118,7 @@ But I can not access VNC server from Poison. Let us **tunnel** the Poison’s po
 ssh -L 5901:127.0.0.1:5901 charix@10.10.10.84
 ```
 
-![](/img/HTB/Posion/img (13).png)
+![](/img/HTB/Poison/img (13).png)
 
 Now that SSH tunneling is done, let us try to access the server via VNC client.
 
@@ -134,9 +134,9 @@ but it required a password and we had previously unzipped a secret file so let's
 vnc -passwd secret 127.0.0.1:5901
 ```
 
-![](/img/HTB/Posion/img (14).png)
+![](/img/HTB/Poison/img (14).png)
 
-![](/img/HTB/Posion/img (15).png)
+![](/img/HTB/Poison/img (15).png)
 
 BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOM !!!! Now we are root :D
 
